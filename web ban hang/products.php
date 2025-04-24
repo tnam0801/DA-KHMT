@@ -118,10 +118,15 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php foreach ($products as $product): ?>
                 <li class="item">
                     <div class="img-box">
-                        <img src="<?= htmlspecialchars($product['image_url']) ?>" width="300" alt="">
+                        <a href="product_detail.php?id=<?= $product['product_id'] ?>">
+                            <img src="<?= htmlspecialchars($product['image_url']) ?>" width="300" alt="">
+                        </a>
                     </div>
-                    <div class="tensp"><?= htmlspecialchars($product['name']) ?></div>
-                    <div class="mota"><?= htmlspecialchars($product['description']) ?></div>
+                    <div class="tensp">
+                        <a href="product_detail.php?id=<?= $product['product_id'] ?>" class="product-link">
+                            <?= htmlspecialchars($product['name']) ?>
+                        </a>
+                    </div>
                     <div class="gia"><?= number_format($product['price'], 0, ',', '.') ?> VNĐ</div>
                     <form method="POST" action="" class="add-to-cart-form">
                         <input type="hidden" name="product_id" value="<?= $product['product_id'] ?>">

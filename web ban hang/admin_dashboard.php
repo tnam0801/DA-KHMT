@@ -29,6 +29,7 @@ $products = $stmt->fetchAll();
             <div class="admin-controls">
                 <span>Xin chào, <?php echo htmlspecialchars($_SESSION['username']); ?></span>
                 <a href="add_product.php" class="btn-add">Thêm sản phẩm mới</a>
+                <a href="order_statistics.php" class="btn-add">Thống kê đơn hàng</a>
                 <a href="logout.php" class="btn-logout">Đăng xuất</a>
             </div>
         </div>
