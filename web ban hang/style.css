@@ -1271,3 +1271,27 @@ small {
     }
 }
 
+.product-link {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.product-link:hover {
+    color: burlywood;
+}
+
+.img-box a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.img-box img {
+    transition: transform 0.3s;
+}
+
+.img-box:hover img {
+    transform: scale(1.05);
+}
+
